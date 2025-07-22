@@ -42,5 +42,12 @@ print(new_result)
 #modulus
 pizza = 10
 people = 3
-print('left over', 10 % 3)
+print('left over', 10 % 3) # % kalan bulma operatörüdür
+
+#Raising Numbers to a Power
+print(3 * 3 * 3)
+print(3 ** 5) # ** üs işlemleri için kullanılıyor
+result1 = math.pow(3 , 5) # birinci sayının ikinci sayı üssünü alır
+print(result1)
+
 
