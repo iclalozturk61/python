@@ -50,14 +50,11 @@ print(3 ** 5) # ** üs işlemleri için kullanılıyor
 result1 = math.pow(3 , 5) # birinci sayının ikinci sayı üssünü alır
 print(result1)
 #**********************STRING************************
-
-#escape characters
+# #escape characters
 print("Hello\nI\'m iclal\töztürk\rhey")
 print("\x3A") #hexadecimal karakter numarası böyle verilir
 
 print(r"merhabalar \t selam \n hehe") #Raw string: başa konan r ile escape characterlere bakılmaz ne yazdıysan kabul edilir 
-
-
 #Double vs Single Quotes
 print("annem 'iki ekmek al' dedi") #olur
 print('annem "iki ekmek al" dedi') #olur
