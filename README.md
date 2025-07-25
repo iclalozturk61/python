@@ -1,5 +1,5 @@
 # py-GeneralExamples-v1
-genel basit anlama uygulamalarıdır
+genel basit anlama uygulamalarıdır, Caleb Curry'nin https://www.youtube.com/watch?v=s3IvdkCq2_c&list=PL_c9BZzLwBRKK8ndQBBKolg7IxrC5T6Ws oynatma listesi eşliğinde alınan notlardır.
 
 Python dosyalarını Windowsta not defteri aracılığıyla yazıp çalıştırmak hakkında: 
 
