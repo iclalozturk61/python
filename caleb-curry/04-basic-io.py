@@ -1,4 +1,4 @@
-#35 - How to Convert String to List using split: TAMAMLANMADI
+#35 - How to Convert String to List using split: 
 msg = "Pay attention, to, everything I ,say"
 
 words = msg.split() #defalt: boşluklara göre böler
@@ -100,7 +100,7 @@ for food in favs:
 #Queue, kuyruk anlamına gelir. FIFO - First In First Out prensibiyle çalışır.
 #Yani ilk eklenen ilk çıkar. Aynı gerçek sıradaki gibi ilk gelen ilk girer, işleme alınır ilk çıkar.
 #list veri yapısı ile queue oluşturulabilir. özel bir yazımı felan yok list yazar gibi kullanılır. Kullanımı farklı yazımı aynı.
-
+"""
 #queue ankaşılsın diye örnekler
 queue = []
 
@@ -129,9 +129,4 @@ while True:
 
 for food in favs:
     print("40- ", food)
-
-
-
-
-
-
+"""
