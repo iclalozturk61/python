@@ -1,102 +1,27 @@
 #48 - Intro to Modules
-r"""
-🧩 Python Modülleri Hakkında Kısa Not
-Modül nedir? Python’da .py uzantılı, belirli işlevleri barındıran dosyalardır. Kodun parçalanarak daha düzenli ve tekrar kullanılabilir hale gelmesini sağlar.
+"""
+🧩 Python Modülleri Hakkinda Kisa Not
+Modül nedir? Python’da .py uzantili, belirli işlevleri barindiran dosyalardir. Kodun parçalanarak daha düzenli ve tekrar kullanilabilir hale gelmesini sağlar.
 
 Ne işe yarar?
-Kodun okunabilirliğini artırır
-Fonksiyonları ve sınıfları gruplandırır
-Başka projelerde tekrar kullanılabilir
-Karmaşık yapıları sadeleştirir
+Kodun okunabilirliğini artirir
+Fonksiyonlari ve siniflari gruplandirir
+Başka projelerde tekrar kullanilabilir
+Karmaşik yapilari sadeleştirir
 
-Nasıl kullanılır?
-import modul_adi ile içeri aktarılır
-from modul_adi import fonksiyon_adi ile sadece gerekli kısımlar çekilir
+Nasil kullanilir?
+import modul_adi ile içeri aktarilir
+from modul_adi import fonksiyon_adi ile sadece gerekli kisimlar çekilir
 
 Modül türleri:
 📦 Yerleşik modüller: Python ile birlikte gelir (math, os, random)
-🧪 Harici modüller: pip ile yüklenir (requests, numpy)🛠️ Kendi modüllerin: Projeye özel yazdığın .py dosyaları
+🧪 Harici modüller: pip ile yüklenir (requests, numpy)🛠️ Kendi modüllerin: Projeye özel yazdiğin .py dosyalari
 
 Dosya gezgininde modül incelemek:
-Fonksiyonları, sınıfları ve değişkenleri görerek modülün ne işe yaradığını anlayabilirsin
-__init__.py varsa, bu klasör bir paket olarak tanımlanmıştır
+Fonksiyonlari, siniflari ve değişkenleri görerek modülün ne işe yaradiğini anlayabilirsin
+__init__.py varsa, bu klasör bir paket olarak tanimlanmiştir
 
 Pythondaki modullerin indexleri: https://docs.python.org/3/py-modindex.html
-"""
-
-r"""
-import random
-
-print("48-1 ", random) # çıktı: <module 'random' from 'C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\random.py'>
-#dosya gezginine C:\Users\user\AppData\Local\Programs\Python\Python313\Lib yazıp bütün modulelara bakabiliriz
-
-print("48-2 ", random.randint(0, 10)) #0 ile 10 arasında random sayı üretiyor
-"""
-
-r"""
-random.randint(0, 10) BU HUSUSTA ŞÖYLE BIR ŞEY VAR: 
-random.py MODULE IN IÇINDE 917. SATIRDA BAŞLAYAN ŞÖYLE BIR ŞÖYLE BIR ŞEY  VAR:
-
-# ----------------------------------------------------------------------
-# Create one instance, seeded from current time, and export its methods
-# as module-level functions.  The functions share state across all uses
-# (both in the user's code and in the Python libraries), but that's fine
-# for most programs and is easier for the casual user than making them
-# instantiate their own Random() instance.
-
-_inst = Random()    #“Bu satır, random modülündeki Random sınıfından bir örnek (instance) oluşturur.” Çünkü Random sınıfı, rastgelelik üretmek için bir motor gibi çalışır. Bu motorun: Kendi iç durumu (state) vardır.Kendi random(), uniform(), seed() gibi metotları vardır.Yani _inst = Random() dediğimizde, artık elimizde bir bağımsız rastgelelik üreticisi olur.
-seed = _inst.seed 
-random = _inst.random
-uniform = _inst.uniform
-triangular = _inst.triangular
-randint = _inst.randint
-choice = _inst.choice
-randrange = _inst.randrange
-sample = _inst.sample
-shuffle = _inst.shuffle
-choices = _inst.choices
-normalvariate = _inst.normalvariate
-lognormvariate = _inst.lognormvariate
-expovariate = _inst.expovariate
-vonmisesvariate = _inst.vonmisesvariate
-gammavariate = _inst.gammavariate
-gauss = _inst.gauss
-betavariate = _inst.betavariate
-binomialvariate = _inst.binomialvariate
-paretovariate = _inst.paretovariate
-weibullvariate = _inst.weibullvariate
-getstate = _inst.getstate
-setstate = _inst.setstate
-getrandbits = _inst.getrandbits
-randbytes = _inst.randbytes
-
-***NE İŞE YARIYOR:***
-
-import random
-
-# Modül seviyesinde kullanım
-print(random.randint(1, 10))  # Arka plandaki Random() nesnesi kullanılır
-
-# Kendi nesneni oluşturmak istersen:
-my_rng = random.Random()
-print(my_rng.randint(1, 10))  # Aynı işlev, ama kendi kontrolünde
-
-HER SEFERİNDE NESNE OLUŞTURUP KULLANMAK YERİNE KISA KULLANIM SAĞLIYOR. YUKARIDAKİ random.py DOSYASINDAN ALINANLAR SAĞLIYOR BUNLARI
-
-SEED HAKKINDA EK BİLGİ: 
-import random
-
-random.seed(7)
-print(random.random())  # 0.32383276483316237
-print(random.random())  # 0.15084917392450192
-
-random.seed(7)
-print(random.random())  # Yine 0.32383276483316237
-print(random.random())  # Yine 0.15084917392450192
-
-Aynı seed → aynı sonuçlar. Çünkü algoritma aynı yerden başlıyor.
-
-Her seed, farklı bir sayı dizisi üretir. Ama aynı seed, aynı diziyi tekrar tekrar verir.
 """
 
 # 49 - from module import Explained
@@ -117,25 +42,25 @@ print("49-3", seed) #en son seed e ne atanmışsa onu yazacak şuan apple
 from random import seed
 print("49-4 ", seed) #şuan <bound method Random.seed of <random.Random object at 0x000001A7C5B2D590>> verir en son import edildi çünkü, aliasing olarak da adlandırılır bu durum
 
-#50 - How to Alias an Import (import as) 
+#50 - How to Alias an Import (import as)
 """
-Aliases nedir? Daha önce listelerin birbirine atanmasında karşılaşmıştık, yeniden adlandırma veya farklı isimle çağırmak gibi düşünülebilir. 
-list1 = list2 gibi şeyler yapmıştık birinci caleb curry birinci oynatma listesinde kopyalama bölümünde. Şimdi ise bu özelliği kısaltma için kullanıcaz:
+Aliases nedir? Daha önce listelerin birbirine atanmasinda karşilaşmiştik, yeniden adlandirma veya farkli isimle çağirmak gibi düşünülebilir.
+list1 = list2 gibi şeyler yapmiştik birinci caleb curry birinci oynatma listesinde kopyalama bölümünde. Şimdi ise bu özelliği kisaltma için kullanicaz:
 Örnek:
 def uzun_fonksiyon_adi(x):
     return x * 2
 
 kisa = uzun_fonksiyon_adi
-print(kisa(5))  # Çıktı: 10
+print(kisa(5))  # Çikti: 10
 
-Aslında rename yapmış oluyoruz, başka bir isimle erişerek. Bundan sonra eski ismi ile çağırmaya çalışsak bile not defined error verecek. Ve başka değişkenler için kullanabileceğiz aynı ismi.
+Aslinda rename yapmiş oluyoruz, başka bir isimle erişerek. Bundan sonra eski ismi ile çağirmaya çalişsak bile not defined error verecek. Ve başka değişkenler için kullanabileceğiz ayni ismi.
 """
 
 import datetime as dt #datetime modulunu rename yaptık dt ile 
 
 datetime = 12
 
-print("50- ", datetime, dt)
+print("50- ", datetime, dt.datetime.now()) #şuan datetime 12 ye eşitlenmiş durumda, dt ile datetime moduluna erişebiliyoruz. dt.datetime.now() sistem saatien ve gününe ulaşıp yazar
 
 # 51 - Why you should NEVER import *
 """
@@ -242,5 +167,5 @@ dirname(dirname(...))	   Bir üst klasöre çıkar → C:/Users/Iclal
 import utils  
 
 print("53-", utils.range([1,2,5,14,2,89,-8])) 
-############ALIŞTIRMA YAP ###########
+
 
