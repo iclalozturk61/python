@@ -10,7 +10,7 @@ Sözlüklerin Özellikleri:
 -Değerler her tür olabilir: Sayı, liste, başka bir sözlük vs.
 
 -Python'da sözlüklerin (dictionary) çalışma prensibi, hash tablosu mantığına dayanır. Bu da demek oluyor ki:
--Sözlükteki anahtarlar (keys), hızlı erişim için hashable olmak zorundadır.
+-Sözlükteki anahtarlar (keys), hızlı erişim için hashable olmak zorundadır. Variables ın hashable olmasına gerek yok.
 -Çünkü Python, her anahtarın hash() değerini hesaplayarak onu bir tabloya yerleştirir.
 -Bu sayede my_dict[key] gibi bir erişim, doğrudan hash üzerinden yapılır — yani çok hızlıdır.
 
