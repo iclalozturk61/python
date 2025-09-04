@@ -50,7 +50,7 @@ Constructer mı __init__ mi?
     __new__, daha derin bir yapı; nesnenin bellekteki varlığını oluşturur.
 Diğer dillerde (Java, C++, C#) constructor doğrudan nesne oluşturur. Python’da bu görev ikiye bölünmüştür.
 
-
+Pythonda dinamik olarak halihazırda sınıfın içinde var olmayan attiributelar eklenebilir: satır 70 de örneği var    
 """
 
 class Book():
@@ -61,6 +61,16 @@ class Book():
 
 book1 = Book("Beyoğlu'nun En Güzel Abisi") #nesneye bağlı olarak verileri tutabiliyoruz
 print("65-1- ", book1.title) #başlığı parametre olarak vermedim nesne ile halletmiştim
+
+if isinstance(book1, Book): #book1 'in Book türünden olup olmadığını böyle kontrol edebiliriz.
+    print("65-2- ", "yes it is in book")
+else:
+    print("65-2- ", "no it is not book")
+
+book = Book("şeytan ayrıntıda gizlidir") #Dinamik attribute ekleme
+book.year_of_pub = "2022"  # sınıfta yoktu ama ekledik!
+print("65-3- ", book.year_of_pub) # çıktı: 2022
+
 
 # 66 - Creating and Invoking Methods
 
