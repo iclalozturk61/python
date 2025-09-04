@@ -214,7 +214,7 @@ try:
     int(file.read())
 
 except ValueError as e:
-    print("73-2- ", e)
+    print("73-2- ", type(e)) #bu şekilde e yani errorun type ını da yazdırabiliriz
     print("73-2- ", "İnte dönüşecek bir veri değil bunlar")
 
 except Exception as e:
@@ -283,7 +283,7 @@ try:
 except OSError: #FileNotFoundError u inherit etmiş bir hata sınıfıdır.
     print("Cannot Open")
 
-else:
+else: #eğer except e girilmezse else bloğuna girer
     with file:
         #code to pars with
         print("74-2- ", file.readline()) #readLine(): Dosyadan bir satır okur. Her çağrıldığında bir sonraki satıra geçer. 
